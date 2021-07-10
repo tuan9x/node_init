@@ -1,0 +1,56 @@
+{
+    "APP_CONFIG": {
+        "PORT": 3000,
+        "GRPC_PORT": 3009,
+        "SESSION_SECRET": "xxx",
+        "JWT_SECRET": "xxx",
+        "AUTH_REST": "xxx",
+        "LOG": true,
+        "SHOW_ERR": true
+    },
+    "SERVICE_CONFIG": {
+        "JOB": {
+            "URL": "http://localhost:3003"
+        }
+    },
+    "DATABASE_CONFIG": {
+        "host": "127.0.0.1",
+        "port": "5432",
+        "database": "dbone",
+        "dialect": "postgres",
+        "username": "postgres",
+        "password": "123456",
+        "storage": "postgres",
+        "pool": {
+            "max": 100,
+            "idle": 30000
+        },
+        "logging": false
+    },
+    "REDIS_BULL_CONFIG": {
+        "host": "127.0.0.1",
+        "port": 6379,
+        "db": 5,
+        "password": ""
+    },
+    "REDIS_CONFIG": {
+        "MASTER": {
+            "host": "127.0.0.1",
+            "port": 6379,
+            "db": 0,
+            "password": ""
+        },
+        "SLAVE": {
+            "host": "127.0.0.1",
+            "port": 6379,
+            "db": 0,
+            "password": ""
+        }
+    },
+    "TELEGRAM_CONFIG": {
+        "LOG": {
+            "TOKEN": "xxx",
+            "CHAT_ID": "xx"
+        }
+    }
+}

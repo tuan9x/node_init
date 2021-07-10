@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist", 
+      "rootDir": "./src", 
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es2017",
+      "noImplicitAny": false,
+      "moduleResolution": "node",
+      "sourceMap": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "resolveJsonModule": true,
+      "removeComments": true,
+      "strictPropertyInitialization" : false
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules/**/*",
+        ".serverless/**/*",
+        ".webpack/**/*",
+        "_warmup/**/*",
+        ".vscode/**/*",
+        "*.config.js",
+        "**/*.js"
+    ]
+}
+  
