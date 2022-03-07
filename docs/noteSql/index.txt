@@ -1,0 +1,11 @@
+- Err: nextval() in postgresql err, it is exit:
+    + Because run script import .sql (script will insert with ID but nextval not increament) => Err
+    + Or when person add row data on UI Tool and set ID handmade => Err
+
+    => FIX: RUN SCRIPT SQL 
+
+
+https://preview.colorlib.com/theme/fashe/home-02.html#
+
+
+---------------------------------------------------------------------------------

@@ -1,8 +1,6 @@
 async function initDataConfig() {
-    // Init Accoutn
-    return;
+  // Init Accoutn
+  return;
 }
 
-export {
-    initDataConfig
-};
+export { initDataConfig };

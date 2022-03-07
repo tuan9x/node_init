@@ -1,78 +1,87 @@
-
 import {
-    Table, Column, Model, CreatedAt, UpdatedAt, AllowNull, Default, DataType, DeletedAt, HasMany, PrimaryKey, HasOne, Sequelize, BeforeSave, ForeignKey,  BelongsTo, Scopes, Comment
+  Table,
+  Column,
+  Model,
+  CreatedAt,
+  UpdatedAt,
+  AllowNull,
+  Default,
+  DataType,
+  DeletedAt,
+  HasMany,
+  PrimaryKey,
+  HasOne,
+  Sequelize,
+  BeforeSave,
+  ForeignKey,
+  BelongsTo,
+  Scopes,
+  Comment,
 } from "sequelize-typescript";
 import { WebModel } from "./";
 
 @Table({
-    tableName : "pages",
-    indexes: [
-        {
-            fields: ["id", "name", "webId"]
-        }
-    ]
+  tableName: "pages",
+  indexes: [
+    {
+      fields: ["id", "name", "webId"],
+    },
+  ],
 })
-
 export class PageModel extends Model<PageModel> {
-    @Column({
-    primaryKey : true,
-        autoIncrement : true
-    })
-    id: number;
+  @Column({
+    primaryKey: true,
+    autoIncrement: true,
+  })
+  id: number;
 
-    @ForeignKey(() => WebModel)
-    @AllowNull(false)
-    @Column({
-        type: DataType.INTEGER
-    })
-    webId: number;
+  @ForeignKey(() => WebModel)
+  @AllowNull(false)
+  @Column({
+    type: DataType.INTEGER,
+  })
+  webId: number;
 
-    @Comment("Name Page")
-    @AllowNull(false)
-    @Column({
-        type: DataType.STRING(225)
-    })
-    name: string;
+  @Comment("Name Page")
+  @AllowNull(false)
+  @Column({
+    type: DataType.STRING(225),
+  })
+  name: string;
 
-   
+  /* Timestamp */
+  @CreatedAt
+  @Column
+  createdAt: Date;
 
-    /* Timestamp */
-    @CreatedAt
-    @Column
-    createdAt: Date;
+  @UpdatedAt
+  @Column
+  updatedAt: Date;
 
-    @UpdatedAt
-    @Column
-    updatedAt: Date;
+  @DeletedAt
+  @Column
+  deletedAt: Date;
 
-    @DeletedAt
-    @Column
-    deletedAt: Date;
+  /* Association */
+  @BelongsTo(() => WebModel)
+  web?: WebModel;
 
-    /* Association */
-    @BelongsTo(() => WebModel)
-    web?: WebModel;
+  // toJSON
+  toJSON(): object {
+    const obj: any = super.toJSON();
+    return obj;
+  }
 
-   
+  //  @ForeignKey(() => GroupModel)
+  //  @AllowNull(true)
+  //  @Column
+  //  group_id?: number;
 
-    // toJSON
-    toJSON(): object {
-      const obj: any = super.toJSON();
-      return obj;
-    }
+  //  @HasMany(() => CommentModel, {
+  //    onDelete: "cascade"
+  //  })
+  //  comments?: CommentModel[];
 
-
-    //  @ForeignKey(() => GroupModel)
-    //  @AllowNull(true)
-    //  @Column
-    //  group_id?: number;
-
-    //  @HasMany(() => CommentModel, {
-    //    onDelete: "cascade"
-    //  })
-    //  comments?: CommentModel[];
-
-    //  @BelongsTo(() => GroupModel)
-    //  group?: GroupModel;
-
+  //  @BelongsTo(() => GroupModel)
+  //  group?: GroupModel;
 }

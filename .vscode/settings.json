@@ -1,0 +1,36 @@
+{
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+  "terminal.integrated.tabs.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "none",
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 90,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.rulers": [],
+  "gitlens.menus": {
+    "editorGroup": {
+      "blame": false,
+      "compare": false
+    }
+  },
+  "window.zoomLevel": 1,
+  "editor.suggestSelection": "first",
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "auto-close-tag.enableAutoCloseSelfClosingTag": true,
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "tslint.autoFixOnSave": true,
+  "javascript.autoClosingTags": true,
+  "breadcrumbs.enabled": true,
+  "workbench.editor.closeOnFileDelete": true,
+  "tslint.alwaysShowStatus": true,
+  "ShortcutMenuBar.navigateBack": false,
+  "ShortcutMenuBar.navigateForward": false,
+  "ShortcutMenuBar.openFilesList": false,
+  "ShortcutMenuBar.toggleActivityBar": true,
+  "ShortcutMenuBar.toggleTerminal": false,
+  "bracketPairColorizer.depreciation-notice": false
+}

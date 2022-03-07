@@ -8,7 +8,9 @@
     "build-ts": "./node_modules/typescript/bin/tsc",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "clean": "rimraf dist",
-    "deploy": "npm run build && ./bin/deploy.sh"
+    "deploy": "npm run build && ./bin/deploy.sh",
+    "format": "prettier --check src/",
+    "format:fix": "prettier --write src/"
   },
   "dependencies": {
     "@grpc/proto-loader": "^0.5.5",

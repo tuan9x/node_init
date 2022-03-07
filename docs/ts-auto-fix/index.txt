@@ -1,0 +1,3 @@
+* Setting -> Extention -> Tslint -> Auto Save Custom...
+
+=> Add: "tslint.autoFixOnSave": true
